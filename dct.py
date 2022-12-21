@@ -1,9 +1,6 @@
-# Demonstrates discrete cosine transform
 import math
 
-import matplotlib
 import matplotlib.pyplot as plt
-matplotlib.use('TkAgg')
 
 
 def alpha(u):
