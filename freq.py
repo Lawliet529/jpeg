@@ -3,7 +3,7 @@ from matplotlib import pyplot as plt
 from scipy.interpolate import make_interp_spline
 
 rapid = np.array([35, 195, 24, 215, 40, 190, 45, 200])
-smooth = np.array([125, 137, 140, 152, 155, 167, 170, 182])
+smooth = np.array([50, 83, 90, 106, 128, 145, 180, 195])
 
 fig, ax = plt.subplots(2, 2)
 
@@ -11,7 +11,7 @@ matrix = np.array([rapid])
 ax[0, 0].imshow(matrix, cmap="gray", vmin=0, vmax=255)
 ax[0, 0].set_xticks([])
 ax[0, 0].set_yticks([])
-ax[0, 0].set_title("Tần số cao")
+ax[0, 0].set_title("Tần số cao", fontsize=20)
 
 interpol = np.linspace(0, 7, 300)
 power_smooth = make_interp_spline(np.array(range(8)), rapid)(interpol)
@@ -25,7 +25,7 @@ matrix = np.array([smooth])
 ax[0, 1].imshow(matrix, cmap="gray", vmin=0, vmax=255)
 ax[0, 1].set_xticks([])
 ax[0, 1].set_yticks([])
-ax[0, 1].set_title("Tần số thấp")
+ax[0, 1].set_title("Tần số thấp", fontsize=20)
 
 interpol = np.linspace(0, 7, 300)
 power_smooth = make_interp_spline(np.array(range(8)), smooth)(interpol)
